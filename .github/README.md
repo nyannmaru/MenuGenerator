@@ -1,4 +1,7 @@
 # MenuGenerator
+# <font color="red">These README is out-of-date!! doesn't make sense at all!!!(´・ω・｀)</font>
+
+
 ## Synopsis
 
 As its name suggests this package generates click-to-go menu for your site.<br>
