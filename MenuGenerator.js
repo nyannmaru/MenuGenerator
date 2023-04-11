@@ -441,14 +441,3 @@ class MenuGenerator{
     /////////////////PUBLIC METHODS of the class end/////////////////
 
 }//end of MenuGenerator Class Definition
-
-
-addEventListener( "load", () => {
-    const menGen = new MenuGenerator("h3", "h4", "h5");
-    menGen.addLiClassAll("liClass").addLiClass(1, "secondLi")
-	.setHeaderDiv("tag", "main")
-	.setWrapperId("genedMenu").setTextTransformerAll( (text) => text.trim() )
-	.setTextTransformer(1 , (text) => `${text} 2nd` )
-	.setWrapperTag("ul")
-	.embedMenu("#genMenu");
-} );
