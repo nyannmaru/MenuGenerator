@@ -390,12 +390,13 @@ class MenuGenerator{
     }
     
     /**
-     * @param {!string} tagName
+     * Set wrapper tags of the menu generated.
+     * @param {!string} tagName Only ol or ul is applicable.
      * @returns {MenuGenerator} <code>this</code>
      */
     setWrapperTag(tagName){
 	const tn = tagName.trim();
-	const validTags = ["ol", "ul", "menu", "nav"];
+	const validTags = ["ol", "ul"];
 	if (!validTags.includes(tn)){
 	    throw Error(`${tagName} is not a valid tag`);
 	}
