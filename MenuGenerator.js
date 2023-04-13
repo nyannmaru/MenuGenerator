@@ -199,7 +199,7 @@ class MenuGenerator{
      */
     #generateMenu(){
 	const qs = document.querySelectorAll(this.#makeQuery());
-	if (!qs){
+	if (qs.length === 0){
 	    return this.#makeWrapper(0);
 	}
 	const containers = this.#seeds.map( (_, depth) => this.#makeWrapper(depth));
@@ -429,15 +429,14 @@ class MenuGenerator{
 	    throw Error(`${query} you feed at query selects nothing`);
 	}
 	const menu = this.#generateMenu();
-	const apd  = appendP !== undefined || appendP !== null;
-	if (apd){
-	    targ.prepend(menu);
-	}else{
+	if (appendP){
 	    targ.append(menu);
+	}else{
+	    targ.prepend(menu);
 	}
 	return null;
     }
     /////////////////////////////////////////////////////////////////
     /////////////////PUBLIC METHODS of the class end/////////////////
 
-}//end of MenuGenerator Class Definition
+}//end of MenuGenertaor Class Definition
