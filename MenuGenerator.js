@@ -441,3 +441,6 @@ class MenuGenerator{
     /////////////////PUBLIC METHODS of the class end/////////////////
 
 }//end of MenuGenertaor Class Definition
+
+
+export {MenuGenerator};
