@@ -24,9 +24,9 @@ Perhap it is simply caused by my shitty nomenclature though...(´・ω・｀)
  | TERM    | MEANING                                          |
  |---------|:------------------------------------------------:|
  | Wrapper | HTML Tag in where all li elements would be hold. In the upper picture, sginifies <font color="green">`ol`</font> elements |
- | Heading Elements | Only `h1`, `h2`, `h3`, `h4`, `h5`, `h6`(case-insensitive) |
- | Depth   | 0 <= Depth < 6 is a natural number which would be distibuted to each heading elemnts, li elements and wrapper elements as its index-number, when you call the constructor. In the upper picture `h1` is indexed to depth = 0, and `h2` done to depth = 1. |
- | TextTranformer | This is a `function` which takes `one string` object and returns `one string` object. ex) ```javascript text => text + "appendix"``` etc |
+ | Heading Elements | Only `"h1""`, `"h2"`, `"h3"`, `"h4"`, `"h5"`, `"h6"`(case-insensitive) |
+ | Depth   | 0 <= Depth < 6 is a natural number which would be distibuted to each heading elemnts, li elements and wrapper elements as its index-number, when you call the constructor. In the upper picture `"h1"` is indexed to depth = 0, and `"h2"` done to depth = 1. |
+ | TextTranformer | This is a `function` which takes `one string` object and returns `one string` object. ex) `text => text + "appendix"` etc |
 
 
 ## Methods
@@ -57,7 +57,7 @@ All methods except for `embedMenu` is self-referencial so you can call them in a
  | addLiClassAll | The same with `addLiClass` but for all depth. |
  | addWrapperClass | Add class attributes to the generating menu's wrapper tag at specific depth. |
  | addWrapperClassAll | The same with `addWrapperClass` but for all depth. |
- | setTextTransformer | This is to to modify the textContent of generating menu's li elements at specific depth. TextTransformer would be take a textContent of heading elemnts and its return value would be a textContent of the li. If not set default textTranformer ```javascript (tc) => tc```would be used. |
+ | setTextTransformer | This is to to modify the textContent of generating menu's li elements at specific depth. TextTransformer would be take a textContent of heading elemnts and its return value would be a textContent of the li. If not set default textTranformer `(tc) => tc`would be used. |
  | setTextTransformerAll | The same with `setTextTransformer` but for all depth. |
  | setWrapperTag | This is to select the wrapper tag. only either `ul` or `ol` are available. If not set `ol` is selected |
  | setWrapperId | This is to set the outermost wrapper's id attribute |
