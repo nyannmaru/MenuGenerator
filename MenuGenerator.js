@@ -215,7 +215,11 @@ class MenuGenerator{
 		prevDepth = currentDepth;
 	    }else{//this pattern incurs partial reduction of ol elems(´・ω・｀)
 		for (let depth = prevDepth; depth !== currentDepth; depth--){
-		    containers[depth-1].append(containers[depth]);
+		    //need to wrap the current ol with raw li
+		    const li = document.createElement("li");//perhaps need some modif?(´・ω・｀)
+		    li.append(containers[depth]);
+		    //and then wrap it!
+		    containers[depth-1].append(li);
 		    //partial redcution you'd better to refactor(´・ω・｀)
 		    containers[depth] = this.#makeWrapper(depth);
 		    //assigns new container
@@ -227,7 +231,9 @@ class MenuGenerator{
 	//wrap up! nests all wrappers who has children(´・ω・｀)
 	for (let idx = containers.length-1; idx !== 0; --idx){
 	    if (containers[idx].hasChildNodes()){
-		containers[idx-1].append(containers[idx]);
+		const li = document.createElement("li");
+		li.append(containers[idx]);
+		containers[idx-1].append(li);
 	    }
 	}
 	if (this.#wrapperId.length !== 0){
